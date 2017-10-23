@@ -170,7 +170,6 @@ Constructors and methods go here
     <panel_attributes>chat.controller :: ChatRunner
 --
 
-
 --
 + main(String []) : void
 </panel_attributes>

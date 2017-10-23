@@ -1,8 +1,10 @@
 package chat.controller;
 
+import chat.view.*;
+
 public class ChatController 
 {
-//	private PopupDisplay display;
+	private PopupDisplay display;
 	
 	public ChatController()
 	{
@@ -11,9 +13,6 @@ public class ChatController
 	
 	public void start()
 	{
-		
-		
-		
-		
+			
 	}
 }
