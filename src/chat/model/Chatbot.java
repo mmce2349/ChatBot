@@ -22,19 +22,23 @@ public class Chatbot
 	{
 		this.movieList = new ArrayList<Movie>();
 		this.shoppingList = new ArrayList<String>();
-		this.cuteAnimalMemes = null;
-		this.currentTime = null;
-		this.questions = null;
+		this.cuteAnimalMemes = new ArrayList<String>();
+		this.questions = new String [10];
 		this.username = username;
 		this.content = null;
 		this.intro = null;
-		this.currentTime = null;
-		this.topics = null;
+		this.currentTime = LocalTime.now();
+		this.topics = new String [7];
 		this.verbs = new String [4];
-		this.followUps = null;
+		this.followUps = new String [5];
 		
 		buildVerbs();
 		buildShoppingList();
+		buildQuestions();
+		buildMovieList();
+		buildCuteAnimals();
+		processConversation("");
+		getCurrentTime();
 	}
 	
 	private void buildVerbs()
@@ -47,10 +51,11 @@ public class Chatbot
 
 	private void buildMovieList()
 	{
-//		movieList.add("");
-//		movieList.add("Spiderman");
-//		movieList.add("Hidden Figure");
-//		
+		movieList.add(new Movie (""));
+		movieList.add(new Movie ("Spiderman"));
+		movieList.add(new Movie ("Hidden Figure"));
+		movieList.add(new Movie ("Man of Steel"));
+		movieList.add(new Movie ("Monty Python and the Holy Grail"));
 	}
 	
 	private void buildShoppingList()
@@ -65,17 +70,34 @@ public class Chatbot
 	
 	private void buildCuteAnimals()
 	{
-		
+		cuteAnimalMemes.add("otter");
+		cuteAnimalMemes.add("kittie");
+		cuteAnimalMemes.add("FLOOFER");
+		cuteAnimalMemes.add("otter");
+		cuteAnimalMemes.add("kittie");
+		cuteAnimalMemes.add("FLOOFER");
+		cuteAnimalMemes.add("FLOOFER");
+		cuteAnimalMemes.add("pupper");
 	}
 	
 	private void buildQuestions()
 	{
-		
+		questions[0] = "What is your name?";
+		questions[1] = "What is your age?";
+		questions[2] = "What is your favorite color?";
+		questions[3] = "What is your favorite animal?";
+		questions[4] = "What is your favorite movie?";
+		questions[5] = "What is the capital of Assyria?";
+		questions[6] = "What is the air speed velocity of an unladen shallow?";
+		questions[7] = "Why is GIR so amazing?";
+		questions[8] = "Do coconuts migrate?";
+		questions[9] = "What is your quest?";		
 	}
 	
 	public String processConversation(String input)
 	{
-		return null;
+		input = "The input will not be Null.";
+		return input;
 	}
 	
 	public boolean lengthChecker(String input)
@@ -151,7 +173,7 @@ public class Chatbot
 
 	public String [] getQuestions()
 	{
-		return null;
+		return questions;
 	}
 	
 	public String[] getVerbs()
@@ -186,7 +208,7 @@ public class Chatbot
 	
 	public LocalTime getCurrentTime()
 	{
-		return null;
+		return currentTime;
 	}
 	
 	public void setUsername(String username)
