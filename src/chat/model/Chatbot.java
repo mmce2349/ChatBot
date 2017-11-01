@@ -71,6 +71,12 @@ public class Chatbot
 		shoppingList.add("protein");
 		shoppingList.add("fruits");
 		shoppingList.add("grains");
+		shoppingList.add("muffins");
+		shoppingList.add("drinks");
+		shoppingList.add("rope");
+		shoppingList.add("coconuts");
+		shoppingList.add("candy");
+		shoppingList.add("shirts");
 		
 	}
 	
