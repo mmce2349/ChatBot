@@ -42,6 +42,7 @@ public class Chatbot
 		buildChatbotResponse();
 		buildTopics();
 		buildFollowUps();
+		getContent();
 	}
 	
 	private void buildVerbs()
@@ -59,6 +60,8 @@ public class Chatbot
 		movieList.add(new Movie ("Hidden Figure"));
 		movieList.add(new Movie ("Man of Steel"));
 		movieList.add(new Movie ("Monty Python and the Holy Grail"));
+		movieList.add(new Movie ("Thor"));
+		movieList.add(new Movie ("IronMan"));
 	}
 	
 	private void buildShoppingList()
@@ -81,6 +84,8 @@ public class Chatbot
 		cuteAnimalMemes.add("FLOOFER");
 		cuteAnimalMemes.add("FLOOFER");
 		cuteAnimalMemes.add("pupper");
+		cuteAnimalMemes.add("PUPPER");
+		cuteAnimalMemes.add("pupper");
 	}
 	
 	private void buildQuestions()
@@ -98,7 +103,13 @@ public class Chatbot
 	}
 	private void buildTopics()
 	{
-		
+		topics[0] = "animals";
+		topics[1] = "swimming";
+		topics[2] = "food";
+		topics[3] = "books";
+		topics[4] = "politics";
+		topics[5] = "computers";
+		topics[6] = "Space-X";
 	}
 	private void buildFollowUps()
 	{
@@ -178,6 +189,10 @@ public class Chatbot
 
 	public boolean quitChecker(String exitString)
 	{
+		if (exitString.equalsIgnoreCase("quit"))
+		{
+			return true;
+		}
 		return false;
 	}
 

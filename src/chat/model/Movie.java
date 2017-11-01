@@ -19,8 +19,10 @@ public class Movie
 		this.ratingMPAA = null;
 		this.review = null;
 		this.length = -99;
-		this.releaseDate = null;
+		this.releaseDate = getReleaseDate();
 		this.starScore = Double.NaN;
+		
+		getReleaseDate();
 	}
 
 	public String getTitle()
