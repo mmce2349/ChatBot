@@ -89,7 +89,7 @@ public class Chatbot
 		questions[3] = "What is your favorite animal?";
 		questions[4] = "What is your favorite movie?";
 		questions[5] = "What is the capital of Assyria?";
-		questions[6] = "What is the air speed velocity of an unladen shallow?";
+		questions[6] = "What is the air speed velocity of an unladen swallow?";
 		questions[7] = "Why is GIR so amazing?";
 		questions[8] = "Do coconuts migrate?";
 		questions[9] = "What is your quest?";		
@@ -106,9 +106,17 @@ public class Chatbot
 	
 	private String buildChatbotResponse()
 	{
-		String response = "";
-		
+		String response = "I ";
+		int random = (int) (Math.random() * verbs.length);
 				
+		response += verbs[random];
+		
+		random = (int) (Math.random() * topics.length);
+		response += " " + topics[random] + ".\n";
+		
+		random = (int) (Math.random() * questions.length);
+		response += questions[random];
+		
 		return response; 
 	}
 	
