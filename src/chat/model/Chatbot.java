@@ -40,6 +40,8 @@ public class Chatbot
 		processConversation("");
 		getCurrentTime();
 		buildChatbotResponse();
+		buildTopics();
+		buildFollowUps();
 	}
 	
 	private void buildVerbs()
@@ -93,6 +95,14 @@ public class Chatbot
 		questions[7] = "Why is GIR so amazing?";
 		questions[8] = "Do coconuts migrate?";
 		questions[9] = "What is your quest?";		
+	}
+	private void buildTopics()
+	{
+		
+	}
+	private void buildFollowUps()
+	{
+		
 	}
 	
 	public String processConversation(String input)
