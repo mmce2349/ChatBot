@@ -39,6 +39,7 @@ public class Chatbot
 		buildCuteAnimals();
 		processConversation("");
 		getCurrentTime();
+		buildChatbotResponse();
 	}
 	
 	private void buildVerbs()
@@ -96,8 +97,19 @@ public class Chatbot
 	
 	public String processConversation(String input)
 	{
-		input = "The input will not be Null.";
-		return input;
+		String chatbotResponse = "";
+		chatbotResponse += "You said: " + "\n" + input + "\n";
+		chatbotResponse += buildChatbotResponse();
+		
+		return chatbotResponse; 
+	}
+	
+	private String buildChatbotResponse()
+	{
+		String response = "";
+		
+				
+		return response; 
 	}
 	
 	public boolean lengthChecker(String input)
