@@ -265,6 +265,15 @@ public class Chatbot
 
 	public boolean keyboardMashChecker(String sample)
 	{
+		if(sample.contains("sdf") || sample.contains("SDF") || sample.contains("dfg") || sample.contains("cvb") || sample.contains(",./") || 
+				sample.contains("kjh") || sample.contains("DFG") || sample.contains("CVB") || sample.contains("KJH"))
+		{
+			return true;
+		}
+		else if (sample.contains("S.D.F.") || sample.contains("derf"))
+		{
+			return false;
+		}
 		return false;
 	}
 	
