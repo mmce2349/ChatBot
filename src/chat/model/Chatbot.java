@@ -237,7 +237,14 @@ public class Chatbot
 	
 	public boolean movieGenreChecker(String genre)
 	{
+		if(genre.contains("Documentary") || genre.contains("Thriller"))
+		{
+			return true;
+		}
+		else
+		{
 		return false;
+		}
 	}
 
 	public boolean quitChecker(String exitString)
