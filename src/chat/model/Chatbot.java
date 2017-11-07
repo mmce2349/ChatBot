@@ -165,11 +165,11 @@ public class Chatbot
 	
 	public boolean userNameChecker(String input)
 	{
-		if(input.equals(null)|| input.contains("@@") || input.contains(" ") || input.contains(".com") || !input.contains("@"))
+		if(!input.equals(null)|| input.contains("@@") || input.contains(" ") || input.contains(".com"))
 		{
 			return false;
 		}
-		else if (input.contains("@"))
+		else if (input.contains("@"+""))
 		{
 			return true;
 		}
