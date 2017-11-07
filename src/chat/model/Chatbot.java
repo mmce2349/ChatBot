@@ -253,10 +253,6 @@ public class Chatbot
 		{
 			return true;
 		}
-		else if(exitString.contains(""))
-		{
-		return false;
-		}
 		else 
 		{
 			return false;
