@@ -37,4 +37,9 @@ public class ChatbotController
 		
 		return chatbotSays;
 	}
+	
+	public Chatbot getChatbot()
+	{
+		return chatbot;
+	}
 }
