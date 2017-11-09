@@ -259,14 +259,11 @@ public class Chatbot
 
 	public boolean quitChecker(String exitString)
 	{
-		if (exitString.equalsIgnoreCase("quit") || !exitString.equals(null))
-		{
-			return true;
-		}
-		else 
-		{
-			return false;
-		}
+		if (exitString.equalsIgnoreCase("quit"))
+				{
+					return true;
+				}
+		return false;
 	}
 
 	public boolean keyboardMashChecker(String sample)
