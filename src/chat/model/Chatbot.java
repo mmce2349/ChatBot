@@ -25,8 +25,8 @@ public class Chatbot
 		this.cuteAnimalMemes = new ArrayList<String>();
 		this.questions = new String [10];
 		this.username = username;
-		this.content = null;
-		this.intro = null;
+		this.content = "";
+		this.intro = "";
 		this.currentTime = LocalTime.now();
 		this.topics = new String [7];
 		this.verbs = new String [4];
