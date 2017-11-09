@@ -121,7 +121,11 @@ public class Chatbot
 	{
 		
 	}
-	
+	/**
+	 * This method takes input from the user, and generates a response with many follow up questions. 
+	 * @param input This takes the users input from popup display, and states you said this.
+	 * @return It returns a statement of verb topic, and then asks a question to keep the conversation going. 
+	 */
 	public String processConversation(String input)
 	{
 		String chatbotResponse = "";
@@ -130,7 +134,10 @@ public class Chatbot
 		
 		return chatbotResponse; 
 	}
-	
+	/**
+	 * Takes the lists of topics, verbs, and questions to build a random response.
+	 * @return the chatbot response is randomly generated to keep user entertained. 
+	 */
 	private String buildChatbotResponse()
 	{
 		String response = "I ";
@@ -150,13 +157,13 @@ public class Chatbot
 			random = (int) (Math.random() * movieList.size());
 			response += "\n" + movieList.get(random).getTitle() + " is a great movie!";
 		}
-		
-		
-		
-		
 		return response; 
 	}
-	
+	/**
+	 * Make sure the the input is the correct length.	
+	 * @param input takes the input from the user and makes sure that it is the correct length.
+	 * @return if the length is a validlength or if it is invalid. 
+	 */
 	public boolean lengthChecker(String input)
 	{
 		boolean validLength = false;
@@ -172,7 +179,11 @@ public class Chatbot
 	{
 		return false;
 	}
-	
+	/**
+	 * Checks to see if the Username is correctly inputted
+	 * @param input takes the user input and runs a test on it.	
+	 * @return a true or false boolean which denies or accepts the username. 
+	 */
 	public boolean userNameChecker(String input)
 	{
 		if(!input.equals(null)|| input.contains("@@") || input.contains(" ") || input.contains(".com"))
@@ -193,7 +204,11 @@ public class Chatbot
 	{
 		return false;
 	}
-	
+	/**
+	 * This goes through the list of cute animal memes and checks to see if the correct memes are there. 
+	 * @param input takes the input from the build cuteAnimalMemes.
+	 * @return a true or false boolean which states if all necessary animals are present. 
+	 */
 	public boolean cuteAnimalMemeChecker(String input)
 	{
 		int index = 0;
@@ -210,7 +225,11 @@ public class Chatbot
 		}
 		return true;
 	}
-	
+	/**
+	 * Tests to make sure all shopping items are there in the list. 	
+	 * @param shoppingItem takes the String statements from shoppingItems and checks to see what's there.
+	 * @return a boolean true or false which states if everything needed is there or not. 
+	 */
 	public boolean shoppingListChecker(String shoppingItem)
 	{
 		int index = 0; 
