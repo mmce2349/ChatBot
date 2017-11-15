@@ -21,5 +21,19 @@ public class ChatPanel extends JPanel
 		this.appController = appController; 
 		
 	}
+	private void setupPanel()
+	{
+		
+	}
+	
+	private void setupLayout()
+	{
+		
+	}
+	
+	private void setupListeners()
+	{
+		
+	}
 
 }
