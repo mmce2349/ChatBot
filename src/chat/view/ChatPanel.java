@@ -9,16 +9,17 @@ import javax.swing.JButton;
 
 public class ChatPanel extends JPanel
 {
-	private JTextArea responseArea; 
-	private JTextField input;
-	private JButton submit;
-	private SpringLayout layout;
+	private JTextArea chatArea; 
+	private JTextField inputField;
+	private JButton chatButton;
+	private SpringLayout baseLayout;
+	private ChatbotController appController;
 
-	public ChatPanel()
+	public ChatPanel(ChatbotController appController)
 	{
-		responseArea = new JTextArea();
-		input = new JTextField();
-		submit = new JButton();
-		layout = new SpringLayout();
+		super();
+		this.appController = appController; 
+		
 	}
+
 }
