@@ -33,6 +33,9 @@ public class ChatPanel extends JPanel
 		setupLayout();
 		setupListeners();
 	}
+	/**
+	 * This is how you edit and setup your panel and how it looks. 
+	 */
 	private void setupPanel()
 	{
 		this.setBackground(Color.BLACK);
@@ -42,7 +45,9 @@ public class ChatPanel extends JPanel
 		this.add(chatArea);
 		
 	}
-	
+	/**
+	 * This is where you put all of your constraints for your layout. 
+	 */
 	private void setupLayout()
 	{
 		appLayout.putConstraint(SpringLayout.NORTH, inputField, 0, SpringLayout.NORTH, chatButton);

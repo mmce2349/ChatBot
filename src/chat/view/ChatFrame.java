@@ -16,7 +16,9 @@ public class ChatFrame extends JFrame
 		appPanel = new ChatPanel(appController);
 		setupFrame();
 	}
-	
+	/** 
+	 * this is where you set up size and what to call the frame. 
+	 */
 	private void setupFrame()
 	{
 		this.setSize(500, 500);
