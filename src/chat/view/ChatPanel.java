@@ -17,6 +17,7 @@ public class ChatPanel extends JPanel
 	private JButton chatButton;
 	private SpringLayout appLayout;
 	private ChatbotController appController;
+	private JButton checkerButton;
 
 	public ChatPanel(ChatbotController appController)
 	{
@@ -28,7 +29,7 @@ public class ChatPanel extends JPanel
 		chatArea = new JTextArea(10, 25);
 		inputField = new JTextField(25);
 		appLayout = new SpringLayout();
-		
+		checkerButton = new JButton("Checker");
 		
 		
 		setupPanel();
