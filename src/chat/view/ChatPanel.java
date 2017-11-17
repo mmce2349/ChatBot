@@ -32,6 +32,7 @@ public class ChatPanel extends JPanel
 		checkerButton = new JButton("Checker");
 		
 		
+		
 		setupPanel();
 		setupLayout();
 		setupListeners();
@@ -63,6 +64,8 @@ public class ChatPanel extends JPanel
 		appLayout.putConstraint(SpringLayout.NORTH, chatArea, 20, SpringLayout.NORTH, this);
 		appLayout.putConstraint(SpringLayout.WEST, chatArea, 25, SpringLayout.WEST, this);
 		appLayout.putConstraint(SpringLayout.EAST, chatArea, -25, SpringLayout.EAST, this);
+		appLayout.putConstraint(SpringLayout.SOUTH, checkerButton, -6, SpringLayout.NORTH, chatButton);
+		appLayout.putConstraint(SpringLayout.EAST, checkerButton, 0, SpringLayout.EAST, chatButton);
 	}
 	
 	private void setupListeners()
