@@ -197,7 +197,7 @@ public class Chatbot
 		}
 		else
 		{
-		return false; 
+		return true; 
 		}
 	}
 	
@@ -347,7 +347,7 @@ public class Chatbot
 
 	public String getIntro()
 	{
-		return null;
+		return intro;
 	}
 	
 	public LocalTime getCurrentTime()
