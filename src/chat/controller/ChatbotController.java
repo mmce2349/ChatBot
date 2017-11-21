@@ -42,6 +42,34 @@ public class ChatbotController
 		
 		return chatbotSays;
 	}
+	
+	public String useCheckers(String text)
+	{
+		String response = "";
+		
+		if(chatbot.contentChecker(text))
+		{
+			response += "This text matches the special content\n";
+		}
+		if(chatbot.cuteAnimalMemeChecker(text))
+		{
+			response += "";
+		}
+		if(chatbot.htmlTagChecker(text))
+		{
+			response += "";
+		}
+		if(chatbot.keyboardMashChecker(text))
+		{
+			response += "";
+		}
+		if(chatbot.lengthChecker(text)) 
+		{
+			response += "";
+		}
+		
+		return response;
+	}
 	private void close()
 	{
 		display.displayText("Goodbye");
