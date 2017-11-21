@@ -53,21 +53,36 @@ public class ChatbotController
 		}
 		if(chatbot.cuteAnimalMemeChecker(text))
 		{
-			response += "";
+			response += "This text matches the animals memes\n";
 		}
 		if(chatbot.htmlTagChecker(text))
 		{
-			response += "";
+			response += "This text matches the html tag\n";
 		}
 		if(chatbot.keyboardMashChecker(text))
 		{
-			response += "";
+			response += "This text matches the keyboard mash\n";
 		}
 		if(chatbot.lengthChecker(text)) 
 		{
-			response += "";
+			response += "This text matches the length\n";
 		}
-		
+		if(chatbot.movieGenreChecker(text))
+		{
+			response += "This text matches the movie genre\n";
+		}
+		if(chatbot.movieTitleChecker(text))
+		{
+			response += "This text matches the movie title\n";
+		}
+		if(chatbot.shoppingListChecker(text))
+		{
+			response += "This text matches the shopping list\n";
+		}
+		if(chatbot.userNameChecker(text))
+		{
+			response += "This text matches the username\n";
+		}
 		return response;
 	}
 	private void close()
