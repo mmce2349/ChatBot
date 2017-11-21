@@ -3,7 +3,11 @@ package chat.model;
 import java.util.List;
 import java.time.LocalTime;
 import java.util.ArrayList;
-
+/** 
+ * This is the Chatbot class which creates the topics and checkers. 
+ * @author mmce2349
+ *@version 21/11/17 1.2
+ */
 public class Chatbot
 {
 	private List<Movie> movieList;
@@ -18,6 +22,10 @@ public class Chatbot
 	private String intro;
 	private LocalTime currentTime;
 	
+	/**
+	 * This intializes all of the variables and calls the methods. 
+	 * @param username
+	 */
 	public Chatbot(String username)
 	{
 		this.movieList = new ArrayList<Movie>();
@@ -44,7 +52,9 @@ public class Chatbot
 		buildFollowUps();
 		getContent();
 	}
-	
+	/**
+	 * This builds the verbs for the chatbot to use.
+	 */
 	private void buildVerbs()
 	{
 		verbs[0] = "like";
@@ -52,7 +62,9 @@ public class Chatbot
 		verbs[2] = "ambivalent about";
 		verbs[3] = "am thinking about";
 	}
-
+/**
+ * This builds the list of movies to talk about.
+ */
 	private void buildMovieList()
 	{
 		movieList.add(new Movie (""));
@@ -63,7 +75,9 @@ public class Chatbot
 		movieList.add(new Movie ("Thor"));
 		movieList.add(new Movie ("IronMan"));
 	}
-	
+	/** 
+	 * this builds the shopping items the chatbot can discuss. 
+	 */
 	private void buildShoppingList()
 	{
 		shoppingList.add("snacks");
@@ -79,7 +93,9 @@ public class Chatbot
 		shoppingList.add("shirts");
 		
 	}
-	
+	/**
+	 * This builds the list of cute animals it can talk about. 
+	 */
 	private void buildCuteAnimals()
 	{
 		cuteAnimalMemes.add("otter");
@@ -93,7 +109,9 @@ public class Chatbot
 		cuteAnimalMemes.add("PUPPER");
 		cuteAnimalMemes.add("pupper");
 	}
-	
+	/**
+	 * This builds a list of questions the chatbot can ask.
+	 */
 	private void buildQuestions()
 	{
 		questions[0] = "What is your name?";
@@ -107,6 +125,10 @@ public class Chatbot
 		questions[8] = "Do coconuts migrate?";
 		questions[9] = "What is your quest?";		
 	}
+	
+	/**
+	 * This builds a list of topics the chatbot talks about. 
+	 */
 	private void buildTopics()
 	{
 		topics[0] = "animals";
@@ -174,30 +196,34 @@ public class Chatbot
 		}
 		return validLength;
 	}
-	
+	/**
+	 * This checks if the html tag is correct. 
+	 * @param input
+	 * @return True or false if it works. 
+	 */
 	public boolean htmlTagChecker(String input)
 	{
 		
 		return false;
 	}
 	/**
-	 * Checks to see if the Username is correctly inputted
+	 * Checks to see if the Username is correctly inputed
 	 * @param input takes the user input and runs a test on it.	
 	 * @return a true or false boolean which denies or accepts the username. 
 	 */
 	public boolean userNameChecker(String input)
 	{
-		if(!input.equals(null)|| input.contains("@@") || input.contains(" ") || input.contains(".com"))
-		{
-			return false;
-		}
-		else if (input.contains("@"+""))
+		if(!input.equals(null) && !input.contains("@@") && !input.contains(" ") && !input.contains(".com") && input.contains("@") && input.startsWith("@"))
 		{
 			return true;
 		}
+	 if (!input.startsWith("@") && input.equals(null))
+		{
+			return false;
+		}
 		else
 		{
-		return true; 
+		return false; 
 		}
 	}
 	
