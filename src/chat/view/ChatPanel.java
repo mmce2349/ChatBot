@@ -9,7 +9,11 @@ import javax.swing.JButton;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+/**
+ * The JPanel subClass for the chatbot project. 
+ * @author Mitch McEntire
+ * @version 21/11/17 1.2
+ */
 public class ChatPanel extends JPanel
 {
 	private JTextArea chatArea; 
