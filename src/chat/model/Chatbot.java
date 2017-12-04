@@ -141,7 +141,11 @@ public class Chatbot
 	}
 	private void buildFollowUps()
 	{
-		
+		followUps[0] = "Some folloup";
+		followUps[1] = "Hows it going?";
+		followUps[2] = "Weather is nice";
+		followUps[3] = "Something cool";
+		followUps[4] = "Whats up with your hair?";	
 	}
 	/**
 	 * This method takes input from the user, and generates a response with many follow up questions. 
@@ -151,6 +155,7 @@ public class Chatbot
 	public String processConversation(String input)
 	{
 		String chatbotResponse = "";
+		chatbotResponse += currentTime.getHour() + ":" + currentTime.getMinute() + "";
 		chatbotResponse += "You said: " + "\n" + input + "\n";
 		chatbotResponse += buildChatbotResponse();
 		
