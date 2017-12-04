@@ -10,6 +10,8 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JLabel;
+import javax.swing.JScrollPane; 
+
 /**
  * The JPanel subClass for the chatbot project. 
  * @author Mitch McEntire
@@ -24,6 +26,7 @@ public class ChatPanel extends JPanel
 	private ChatbotController appController;
 	private JButton checkerButton;
 	private JLabel infoLabel;
+	private JScrollPane chatScrollPane;
 
 	public ChatPanel(ChatbotController appController)
 	{
@@ -37,9 +40,10 @@ public class ChatPanel extends JPanel
 		appLayout = new SpringLayout();
 		checkerButton = new JButton("Checker");
 		infoLabel = new JLabel("Type to Chat with the Chatbot");
+		chatScrollPane = new JScrollPane();
 		
 		
-		
+		setupScrollPane();
 		setupPanel();
 		setupLayout();
 		setupListeners();
@@ -47,6 +51,13 @@ public class ChatPanel extends JPanel
 	/**
 	 * This is how you edit and setup your panel and how it looks. 
 	 */
+	
+	private void setupScrollPane()
+	{
+		chatScrollPane.setViewportView(chatArea);
+		chatScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+		chatScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+	}
 	private void setupPanel()
 	{
 		this.setBackground(Color.BLUE);
