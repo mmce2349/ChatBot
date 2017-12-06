@@ -261,23 +261,25 @@ public class Chatbot
 	 */
 	public boolean userNameChecker(String input)
 	{
-		if(!input.equals(null) || !input.contains("@@") || !input.contains(" ") || !input.contains(".com") && input.startsWith("@"))
-		{
-			return true;
-		}
-	 if ( input.equals(null))
-		{
-			return false;
-		}
-		else
-		{
-		return false; 
-		}
+			if(input==null)
+			{
+				return false; 
+			}
+			
+			if(input.startsWith("@"))
+			{
+				return true;
+			}
+		return true; 
 	}
 	
 	public boolean contentChecker(String contentCheck)
 	{
-		return false;
+		if(contentCheck == null)
+		{
+			return false;
+		}
+		return true;
 	}
 	/**
 	 * This goes through the list of cute animal memes and checks to see if the correct memes are there. 
@@ -352,8 +354,12 @@ public class Chatbot
 	}
 
 	public boolean quitChecker(String exitString)
-	{
-		if (exitString.equalsIgnoreCase("quit"))
+	{ 	
+		if(exitString == null)
+			{
+			return false; 
+			}
+		else if (exitString.equalsIgnoreCase("quit"))
 			{
 				return true;
 			}
