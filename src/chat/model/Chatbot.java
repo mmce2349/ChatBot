@@ -24,7 +24,7 @@ public class Chatbot
 	
 	/**
 	 * This intializes all of the variables and calls the methods. 
-	 * @param username
+	 * @param username is put in and it reveals all of this detail. 
 	 */
 	public Chatbot(String username)
 	{
@@ -51,7 +51,14 @@ public class Chatbot
 		buildTopics();
 		buildFollowUps();
 		getContent();
+		toString();
 	}
+	//public String toString()
+	{
+		
+	//	return string;
+	}
+	
 	/**
 	 * This builds the verbs for the chatbot to use.
 	 */
@@ -208,6 +215,7 @@ public class Chatbot
 				}
 		return response; 
 	}
+	
 	/**
 	 * Make sure the the input is the correct length.	
 	 * @param input takes the input from the user and makes sure that it is the correct length.
