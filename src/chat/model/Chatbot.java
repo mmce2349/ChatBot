@@ -139,9 +139,12 @@ public class Chatbot
 		topics[5] = "computers";
 		topics[6] = "Space-X";
 	}
+	/**
+	 * This builds followups for the chatbot to use in conversation.
+	 */
 	private void buildFollowUps()
 	{
-		followUps[0] = "Some folloup";
+		followUps[0] = "Some followup";
 		followUps[1] = "Hows it going?";
 		followUps[2] = "Weather is nice";
 		followUps[3] = "Something cool";
@@ -272,7 +275,11 @@ public class Chatbot
 			}
 		return true; 
 	}
-	
+	/**
+	 * This checks to see if there is content which fits the purpose.	
+	 * @param contentCheck takes the users input and checks to see if its good content
+	 * @return a true or false boolean which states if the content is good.
+	 */
 	public boolean contentChecker(String contentCheck)
 	{
 		if(contentCheck == null)
@@ -323,7 +330,11 @@ public class Chatbot
 	}
 		return true;
 	}
-	
+	/**
+	 * tests to see if the movie title is a good length
+	 * @param title from user and sees if its good.
+	 * @return returns a true or false statement which states if we have a certain title. 
+	 */
 	public boolean movieTitleChecker(String title)
 	{
 		int index = 0;
@@ -340,7 +351,11 @@ public class Chatbot
 		}
 		return true;
 	}
-	
+	/**
+	 * Checks to see what the movie genre is. 
+	 * @param genre from user input and sees what it is. 
+	 * @return returns a boolean method to state if it contains it. 
+	 */
 	public boolean movieGenreChecker(String genre)
 	{
 		if(genre.contains("Documentary") || genre.contains("Thriller"))
@@ -352,7 +367,9 @@ public class Chatbot
 		return false;
 		}
 	}
-
+	/**
+	 *  checks to see if the input is the word quit and if it does, it shuts down the app. 
+	 */
 	public boolean quitChecker(String exitString)
 	{ 	
 		if(exitString == null)
@@ -365,7 +382,11 @@ public class Chatbot
 			}
 		return false;
 	}
-
+	/**
+	 * Checks to see if the user is keyboard smashing. 
+	 * @param sample to see if the text is smash able
+	 * @return a true or false statement which states if the user was keyboard smashing. 
+	 */
 	public boolean keyboardMashChecker(String sample)
 	{
 		if(sample.contains("sdf") || sample.contains("SDF") || sample.contains("dfg") || sample.contains("cvb") || sample.contains(",./") || 
