@@ -400,7 +400,10 @@ public class Chatbot
 		}
 		return false;
 	}
-	
+	/**
+	 * this is all the getters to return their specific values. 
+	 * @return certain arrays, and objects for chatbot to use. 
+	 */
 	public List<Movie> getMovieList()
 	{
 		return movieList;
