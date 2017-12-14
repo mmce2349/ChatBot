@@ -338,6 +338,12 @@ public class Chatbot
 	}
 		return true;
 	}
+	public String toString()
+	{
+		String description = "Hi, I am chatbot";
+		
+		return description; 
+	}
 	/**
 	 * tests to see if the movie title is a good length
 	 * @param title from user and sees if its good.
