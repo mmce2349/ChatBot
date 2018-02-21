@@ -1,16 +1,10 @@
 package chat.view;
 
 import chat.controller.ChatbotController;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.JTextArea;
-import javax.swing.SpringLayout;
-import javax.swing.JButton;
+import javax.swing.*;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JLabel;
-import javax.swing.JScrollPane; 
 
 /**
  * The JPanel subClass for the chatbot project. 
@@ -19,6 +13,11 @@ import javax.swing.JScrollPane;
  */
 public class ChatPanel extends JPanel
 {
+	private JButton searchButton;
+	private JButton saveButton;
+	private JButton loadButton;
+	private JButton tweetButton;
+	
 	private JTextArea chatArea; 
 	private JTextField inputField;
 	private JButton chatButton;
@@ -41,8 +40,10 @@ public class ChatPanel extends JPanel
 		checkerButton = new JButton("Checker");
 		infoLabel = new JLabel("Type to Chat with the Chatbot");
 		chatScrollPane = new JScrollPane();
-		
-		
+		loadButton = new JButton("load", new ImageIcon(getClass().getResource("/chat/view/images/load.png")));
+		searchButton = new JButton("search", new ImageIcon(getClass().getResource("/chat/view/images/search.png")));
+		saveButton = new JButton("save", new ImageIcon(getClass().getResource("/chat/view/images/Save.png")));
+		tweetButton = new JButton("tweet", new ImageIcon(getClass().getResource("/chat/view/images/tweet.png")));
 		setupScrollPane();
 		setupPanel();
 		setupLayout();
