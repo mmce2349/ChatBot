@@ -70,6 +70,10 @@ public class ChatPanel extends JPanel
 		chatArea.setEnabled(false);
 		chatArea.setEnabled(false);
 		this.add(checkerButton);
+		this.add(loadButton);
+		this.add(saveButton);
+		this.add(searchButton);
+		this.add(tweetButton);
 		
 	}
 	/**
