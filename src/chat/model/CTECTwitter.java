@@ -52,7 +52,11 @@ public class CTECTwitter
 	public String getMostCommonWord(String username)
 	{
 		String mostCommon = "";
+		collectTweets(username);
+		turnStatusesToWords();
+		
 		return mostCommon;
+		
 	}
 	
 	private void collectTweets(String username)
