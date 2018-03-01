@@ -28,6 +28,8 @@ public class CTECTwitter
 	{
 		this.appController = appController;
 		this.chatbotTwitter = TwitterFactory.getSingleton();
+		this.tweetedWords = new ArrayList<String>();
+		this.searchedTweets = new ArrayList<Status>();
 	}
 	
 	public void sentTweet(String textToTweet)
