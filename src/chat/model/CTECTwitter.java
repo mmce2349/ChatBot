@@ -96,8 +96,23 @@ public class CTECTwitter
 			String [] tweetWords = tweetText.split(" ");
 			for(int index =0; index < tweetWords.length; index++)
 			{
-				tweetedWords.add(removePunchtuation(tweetWords[index]).trim());
+				tweetedWords.add(removePunctuation(tweetWords[index]).trim());
 			}
 		}
+	}
+	
+	private String removePunctuation(String currentString)
+	{
+		String punctuation = ".,'?!:;() {}^[]<>-";
+		
+		String scrubbedString ="";
+		for(int i =0; i < currentString.length(); i++)
+		{
+			if(punctuation.indexOf(currentString.charAt(i))==-1)
+			{
+				scrubbedString += currentString.charAt(i);
+			}
+		}
+		return scrubbedString;
 	}
 }
