@@ -21,6 +21,8 @@ public class CTECTwitter
 {
 	private ChatbotController appController;
 	private Twitter chatbotTwitter;
+	private List<Status> searchedTweets;
+	private List<Status> tweetedWords;
 	
 	public CTECTwitter(ChatbotController appController)
 	{
