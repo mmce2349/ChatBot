@@ -136,6 +136,9 @@ public class CTECTwitter
 		}
 		boringWords = new String[wordCount];
 		wordScanner.close();
+		
+		
+		
 		wordScanner = new Scanner(this.getClass().getResourceAsStream("data/commonWords.txt"));
 		for(int index = 0; index < boringWords.length; index++)
 		{
