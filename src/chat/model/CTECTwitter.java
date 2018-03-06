@@ -58,7 +58,7 @@ public class CTECTwitter
 		turnStatusesToWords();
 		totalWordCount = tweetedWords.size();
 		String [] boring = createIgnoredWordArray();
-		
+		trimTheBoringWords(boring);
 		
 		return mostCommon;
 		
