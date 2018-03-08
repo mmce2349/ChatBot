@@ -154,7 +154,7 @@ public class CTECTwitter
 	
 	private String removePunctuation(String currentString)
 	{
-		String punctuation = ".,'?!:;() {}^[]<>-";
+		String punctuation = ".,'?!:;() {}^[]<>-\n";
 		
 		String scrubbedString ="";
 		for(int i =0; i < currentString.length(); i++)
