@@ -16,6 +16,7 @@ import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;
 import java.text.DecimalFormat;
+import java.util.HashMap;
 
 public class CTECTwitter 
 {
@@ -24,6 +25,7 @@ public class CTECTwitter
 	private List<Status> searchedTweets;
 	private List<String> tweetedWords;
 	private long totalWordCount;
+	private HashMap<String, Integer> wordsAndCount;
 	
 	public CTECTwitter(ChatbotController appController)
 	{
@@ -32,6 +34,7 @@ public class CTECTwitter
 		this.tweetedWords = new ArrayList<String>();
 		this.searchedTweets = new ArrayList<Status>();
 		this.totalWordCount = 0;
+		this.wordsAndCount = new HashMap<String, Integer>();
 	}
 	
 	public void sentTweet(String textToTweet)
@@ -59,6 +62,8 @@ public class CTECTwitter
 		totalWordCount = tweetedWords.size();
 		String [] boring = createIgnoredWordArray();
 		trimTheBoringWords(boring);
+		removeBlanks();
+		generateWordCount();
 		
 		return mostCommon;
 		
