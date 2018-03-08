@@ -68,6 +68,20 @@ public class CTECTwitter
 		return mostCommon;
 		
 	}
+	private void generateWordCount()
+	{
+		for(String word : tweetedWords)
+		{
+			if(!wordsAndCount.containsKey(word.toLowerCase()))
+			{
+				wordsAndCount.put(word.toLowerCase(), 1);
+			}
+			else
+			{
+				wordsAndCount.replace(word.toLowerCase(), wordsAndCount.get(word.toLowerCase()) + 1);
+			}
+		}
+	}
 	private void removeBlanks()
 	{
 		for(int index = tweetedWords.size() -1; index >= 0; index--)
