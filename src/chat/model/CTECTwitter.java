@@ -85,7 +85,31 @@ public class CTECTwitter
 		 return mostCommon;
 		
 	}
-	private ArrayList<Map.Entry<String, Integer>> sortHashMap()
+	private String sortedWords()
+	{
+		String allWords = "";
+		String [] words = (String []) wordsAndCount.keySet().toArray();
+		for(int index = 0; index< words.length -1; index++)
+		{
+			int maxIndex = index;
+			
+			for(int inner = index + 1; inner< words.length; inner++)
+			{
+				maxIndex = inner;
+			}
+			String tempMax = words[maxIndex];
+			words[maxIndex] = words[index];
+			words[index] = tempMax;
+		}
+		for(String word : words)
+		{
+			
+			allWords += word + ", ";
+		}
+		return allWords;
+		
+	}
+	 private ArrayList<Map.Entry<String, Integer>> sortHashMap()
 	{
 		
 		ArrayList<Map.Entry<String, Integer>> entries = new ArrayList<Map.Entry<String, Integer>>(wordsAndCount.entrySet());
