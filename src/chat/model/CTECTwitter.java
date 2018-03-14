@@ -88,7 +88,9 @@ public class CTECTwitter
 	private String sortedWords()
 	{
 		String allWords = "";
-		String [] words = (String []) wordsAndCount.keySet().toArray();
+		String [] words = new String [wordsAndCount.size()];
+		ArrayList<String> wordList = new ArrayList<String>(wordsAndCount.keySet());
+		
 		for(int index = 0; index< words.length -1; index++)
 		{
 			int maxIndex = index;
