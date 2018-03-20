@@ -116,6 +116,7 @@ public class CTECTwitter
 		results += matchingTweets.get(randomTweet);
 		 return results;
 	}
+	
 	private String sortedWords()
 	{
 		String allWords = "";
