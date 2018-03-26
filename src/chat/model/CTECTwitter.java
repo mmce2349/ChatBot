@@ -106,10 +106,11 @@ public class CTECTwitter
 			try
 			{
 				QueryResult resultingTweets = chatbotTwitter.search(twitterQuery);
-				for(Status current: resultingTweets.getTweets())
+				
+				for(Status currentTweet: resultingTweets.getTweets())
 				{
-					matchingTweets.add(current);
-					lastId = current.getId();
+					matchingTweets.add(currentTweet);
+					lastId = currentTweet.getId();
 				}
 				
 			}
@@ -221,6 +222,10 @@ public class CTECTwitter
 				ResponseList<Status> listedTweets = chatbotTwitter.getUserTimeline(username, statusPage);
 				for(Status current : listedTweets)
 				{
+					if(current.isRetweeted())
+					{
+						
+					}
 					if(current.getId() < lastID)
 					{
 						searchedTweets.add(current);
